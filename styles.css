@@ -3,12 +3,15 @@
   Base Styles
 --------------------------- */
 :root {
+  --accent-color-2: #a8f1ff;
   --accent-color: #3498db;
   --bg-color: #404040;
   --lightgray: #cccccc;
   --my-orange: #e8b33f;
   --my-yellow: #f2db9c;
+  --orange-light: #fffa8d;
   --primary-color: #2c3e50;
+  --special-color: #6fe6fc;
   --text-color: #808080;
   --text-hover: #eee;
   --transparent: rgba(64, 64, 64, 1);
@@ -38,7 +41,7 @@ body {
 }
 
 header {
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
   text-align: center;
 }
 
@@ -69,6 +72,31 @@ h3 {
   color: var(--my-yellow);
 }
 
+/* --------------------------
+  Header Styles
+--------------------------- */
+
+.header h1 {
+  letter-spacing: 0.2rem;
+  color: var(--orange-light);
+  margin: 0.5em 0.3em 0;
+}
+
+.header img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  outline: solid 1px var(--accent-color);
+}
+
+.header .image-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  border-radius: 50%;
+  padding: 0;
+}
 /* --------------------------
   nav Styles
 --------------------------- */
