@@ -1,9 +1,22 @@
-@import "normalize.css";
+@import "./node_modules/normalize.css/normalize.css";
+/* --------------------------
+  Base Styles
+--------------------------- */
 :root {
-  --primary-color: #2c3e50;
   --accent-color: #3498db;
-  --text-color: #333;
-  --bg-color: #fff;
+  --bg-color: #404040;
+  --lightgray: #cccccc;
+  --my-orange: #e8b33f;
+  --my-yellow: #f2db9c;
+  --primary-color: #2c3e50;
+  --text-color: #808080;
+  --text-hover: #eee;
+  --transparent: rgba(64, 64, 64, 1);
+  --transparent2: rgba(49, 49, 49, 0.75);
+}
+
+html {
+  font-size: 62.5%;
 }
 
 *,
@@ -15,32 +28,61 @@
 }
 
 body {
-  font-family: sans-serif;
-  color: var(--text-color);
   background-color: var(--bg-color);
-  line-height: 1.6;
-  padding: 1rem;
+  color: var(--lightgray);
+  font-family: "Roboto", Verdana, sans-serif;
+  font-size: 1.6rem;
+  height: auto;
+  line-height: 1.5;
+  margin: 0;
 }
 
 header {
+  margin-bottom: 2.4rem;
   text-align: center;
-  margin-bottom: 2rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
 }
 
 section {
-  margin: 2rem 0;
+  margin: 3.2rem 0;
 }
+
+a {
+  color: var(--lightgray);
+  text-decoration: none;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* Headings */
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: var(--my-orange);
+  letter-spacing: 0.5rem;
+}
+
+h3 {
+  color: var(--my-yellow);
+}
+
+/* --------------------------
+  nav Styles
+--------------------------- */
 
 .project-card {
   border: 1px solid #ccc;
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 8px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
 }
