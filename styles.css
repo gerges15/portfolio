@@ -73,6 +73,21 @@ h3 {
   nav Styles
 --------------------------- */
 
+.nav a {
+  border-bottom: 1px solid var(--bg-color);
+  color: var(--lightgray);
+  display: block;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.2em;
+  text-align: center;
+}
+
+.nav a:hover {
+  color: var(--my-orange);
+  border-bottom-color: var(--my-orange);
+}
+
 .project-card {
   border: 1px solid #ccc;
   padding: 1rem;
