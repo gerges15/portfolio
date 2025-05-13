@@ -11,6 +11,7 @@
   --my-yellow: #f2db9c;
   --orange-light: #fffa8d;
   --primary-color: #2c3e50;
+  --second-bg: #393e46;
   --special-color: #6fe6fc;
   --text-color: #808080;
   --text-hover: #eee;
@@ -80,6 +81,33 @@ h3 {
 }
 
 /* --------------------------
+  reusable Styles
+--------------------------- */
+.strong-text {
+  color: var(--special-color);
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.special-text {
+  display: inline-block;
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  color: var(--text-hover);
+}
+
+.inline-block {
+  display: inline-block;
+}
+/* --------------------------
   Header Styles
 --------------------------- */
 
@@ -124,6 +152,13 @@ h3 {
   border-bottom-color: var(--my-orange);
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
 /* --------------------------
   section Styles
 --------------------------- */
@@ -144,6 +179,7 @@ section h2::after {
   display: inline-block;
   vertical-align: middle;
   margin: 0 10px;
+  margin-left: 0;
 }
 section h2::before {
   margin-right: 10px;
@@ -157,16 +193,74 @@ section:nth-child(1) {
   border-top: 1px solid var(--lightgray);
 }
 
+/* --------------------------
+  about me Styles
+--------------------------- */
+#about {
+  color: white;
+}
+
+#about p {
+  font-size: 1.8rem;
+}
+
+#about .role {
+  font-weight: bolder;
+  font-size: x-large;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#about .description {
+  color: var(--lightgray);
+  text-align: justify;
+  margin: 2rem 0;
+}
+
+/* --------------------------
+  skills Styles
+--------------------------- */
+
+#skills .skills {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.skill-card {
+  background: var(--second-bg);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  width: 100px;
+}
+
+.skill-card img {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  color: var(--text-hover);
+}
 .project-card {
   border: 1px solid #ccc;
   padding: 1rem;
   margin-top: 1rem;
   border-radius: 8px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.6rem;
 }
