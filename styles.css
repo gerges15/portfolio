@@ -234,6 +234,48 @@ section:nth-child(1) {
   margin: 2rem 0;
 }
 
+/* Education */
+.education-container {
+  padding: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.education {
+  display: flex;
+  flex-direction: column;
+}
+
+.school-certification {
+  color: #6fe6fc;
+  font-weight: bold;
+}
+
+.school-name {
+  color: var(--lightgray);
+}
+
+.year-grade {
+  display: flex;
+  gap: 2rem;
+  color: #c68efd;
+  width: 100%;
+  align-items: center;
+}
+
+.year,
+.grade {
+  display: flex;
+  align-items: center;
+}
+.year img,
+.grade img {
+  width: 20px;
+  height: 20px;
+  margin: 1rem;
+}
+
 /* --------------------------
   skills Styles
 --------------------------- */
@@ -268,6 +310,7 @@ section:nth-child(1) {
 .skill-card img {
   width: 65px;
   height: 65px;
+  filter: invert(0.7);
   margin-bottom: 0.5rem;
 }
 
