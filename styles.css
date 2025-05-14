@@ -18,6 +18,7 @@
   --text-hover: #eee;
   --transparent: rgba(64, 64, 64, 1);
   --transparent2: rgba(49, 49, 49, 0.75);
+  --nav-height: 6rem;
 }
 
 html {
@@ -49,6 +50,7 @@ header {
 
 section {
   margin: 3.2rem 0;
+  scroll-margin-top: var(--nav-height);
 }
 
 a {
@@ -174,6 +176,26 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 1.6rem;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--second-bg);
+  padding: 1rem 2rem; /* adjust vertical/horizontal padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 9999;
+  opacity: 0.9;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 /* --------------------------
