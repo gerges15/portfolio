@@ -1,5 +1,5 @@
 // Dom selector
-const nav = document.querySelectorAll("nav");
+const nav = document.querySelector("nav");
 
 // Configurations
 const sections = ["about", "skills", "projects", "contact", "cv"];
@@ -7,9 +7,16 @@ const navList = sections.map((l) => `<li><a href="#${l}">${l}</a></li>`);
 const navListHtml = navList.join("");
 
 // Create Navbar
-nav.forEach((n) => {
-  const ulList = `<ul>${navListHtml}</ul>`;
-  n.insertAdjacentHTML("afterbegin", ulList);
+const ulList = `<ul>${navListHtml}</ul>`;
+nav.insertAdjacentHTML("afterbegin", ulList);
+
+//Add sticky navbar
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    nav.classList.add("sticky-nav");
+  } else {
+    nav.classList.remove("sticky-nav");
+  }
 });
 
 // Simple smooth scroll behavior
