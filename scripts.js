@@ -85,3 +85,64 @@ document.querySelectorAll("a[href^='#']").forEach((link) => {
     }
   });
 });
+
+// 🌙 Theme Toggle and ⬆️ Scroll Button Logic
+const moonBtn = document.querySelector(".mode a:nth-child(1)");
+const sunBtn = document.querySelector(".mode a:nth-child(2)");
+const scrollBtn = document.querySelector(".UP");
+const body = document.body;
+
+function enableLightMode() {
+  body.classList.add("light-mode");
+  body.classList.remove("dark-mode");
+  localStorage.setItem("theme", "light");
+  moonBtn.style.display = "block";
+  sunBtn.style.display = "none";
+}
+
+function enableDarkMode() {
+  body.classList.add("dark-mode");
+  body.classList.remove("light-mode");
+  localStorage.setItem("theme", "dark");
+  moonBtn.style.display = "none";
+  sunBtn.style.display = "block";
+}
+
+// Set initial theme on load
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  enableDarkMode();
+} else {
+  enableLightMode();
+}
+
+// Toggle buttons
+moonBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  enableDarkMode();
+});
+
+sunBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  enableLightMode();
+});
+
+// ⬆️ Scroll to top button
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+window.addEventListener("scroll", () => {
+  scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+/*Mode */
+
+const mode = document.querySelector(".mode");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    mode.classList.add("fixed-mode");
+  } else {
+    mode.classList.remove("fixed-mode");
+  }
+});
